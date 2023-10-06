@@ -1,3 +1,3 @@
-import add_0
-x = add_0.add(1, 2)
+from add_0 import add
+x = add(1, 2)
 print(x)
