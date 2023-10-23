@@ -4,29 +4,18 @@ def list_division(my_list_1, my_list_2, list_length):
     for i in range(list_length):
         try:
             dividend = my_list_1[i]
-        except IndexError:
-            print("out of range")
-            result.append(0)
-            continue
-
-        try:
             divisor = my_list_2[i]
+            try:
+                division = dividend / divisor
+            except ZeroDivisionError:
+                division = 0
+                print("division by 0")
+            except TypeError:
+                division = 0
+                print("wrong type")
         except IndexError:
+            division = 0
             print("out of range")
-            result.append(0)
-            continue
-
-        try:
-            division_result = dividend / divisor
-        except ZeroDivisionError:
-            print("division by 0")
-            result.append(0)
-            continue
-        except (TypeError, ValueError):
-            print("wrong type")
-            result.append(0)
-            continue
-
-        result.append(division_result)
-
+        finally:
+            result.append(division)
     return result
