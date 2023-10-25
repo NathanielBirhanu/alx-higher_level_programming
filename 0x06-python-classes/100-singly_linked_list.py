@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Node module
-"""
+"""Define module."""
 
 
 class Node:
@@ -88,7 +86,7 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """
-        Inserts a new Node into the correct sorted position.
+        Inserts a new Node into the correct sorted position in the list (increasing order)
 
         Args:
             value (int): The value of the new node
@@ -99,8 +97,7 @@ class SinglyLinkedList:
             self.head = new_node
         else:
             current = self.head
-            while current.next_node is not None
-            and current.next_node.data < value:
+            while current.next_node is not None and current.next_node.data < value:
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
