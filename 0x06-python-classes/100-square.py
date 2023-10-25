@@ -18,7 +18,7 @@ class Square:
             position (tuple): The position of the square (default is (0, 0))
 
         Raises:
-            TypeError: If size is not an integer or position is not tuple of 2
+            TypeError: If size is not an integer or position is not a tuple of 2 positive integers
             ValueError: If size is less than 0
         """
         self.size = size
@@ -113,4 +113,4 @@ class Square:
         Returns:
             str: The string representation of the square
         """
-        return str(self.my_print())
+        return self.my_print()
